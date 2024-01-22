@@ -12,7 +12,7 @@
 max_val = None
 min_val = None
 
-# התחלת לולאה אינסופית
+# אתחול לולאה אינסופית
 while True:
     # קליטת מספר מהמשתמש
     user_input = int(input("אנא הכנס מספר:"))
