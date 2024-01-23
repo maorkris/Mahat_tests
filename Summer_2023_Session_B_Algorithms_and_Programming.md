@@ -8,34 +8,35 @@
 
 
 ```python
-# הגדרת משתנים למספר המקסימלי והמינימלי
-max_val = None
-min_val = None
-
-# אתחול לולאה אינסופית
-while True:
-    # קליטת מספר מהמשתמש
-    user_input = int(input("אנא הכנס מספר:"))
-
-    # בדיקה אם המספר הוא מספר תלת-ספרתי
-    if 99 < abs(user_input) <= 999:
-        break
-
-    # בדיקה אם זו הפעם הראשונה שמספר מתקבל
-    if max_val is None and min_val is None:
-        max_val = user_input
-        min_val = user_input
-
-    # בדיקה אם המספר החדש הוא המספר הגדול ביותר שהתקבל עד כה
-    if user_input > max_val:
-        max_val = user_input
-
-    # בדיקה אם המספר החדש הוא המספר הקטן ביותר שהתקבל עד כה
-    if user_input < min_val:
-        min_val = user_input
-
-# הדפסת המספר הגדול ביותר והקטן ביותר שהתקבלו
-print(f"המספר הגדול ביותר שהתקבל: {max_val}\nהמספר הקטן ביותר שהתקבל: {min_val}")
+def func1():
+    # הגדרת משתנים למספר המקסימלי והמינימלי
+    max_val = None
+    min_val = None
+    
+    # אתחול לולאה אינסופית
+    while True:
+        # קליטת מספר מהמשתמש
+        user_input = int(input("אנא הכנס מספר:"))
+    
+        # בדיקה אם המספר הוא מספר תלת-ספרתי
+        if 99 < abs(user_input) <= 999:
+            break
+    
+        # בדיקה אם זו הפעם הראשונה שמספר מתקבל
+        if max_val is None and min_val is None:
+            max_val = user_input
+            min_val = user_input
+    
+        # בדיקה אם המספר החדש הוא המספר הגדול ביותר שהתקבל עד כה
+        if user_input > max_val:
+            max_val = user_input
+    
+        # בדיקה אם המספר החדש הוא המספר הקטן ביותר שהתקבל עד כה
+        if user_input < min_val:
+            min_val = user_input
+    
+    # הדפסת המספר הגדול ביותר והקטן ביותר שהתקבלו
+    print(f"המספר הגדול ביותר שהתקבל: {max_val}\nהמספר הקטן ביותר שהתקבל: {min_val}")
 ```
 
 
@@ -74,21 +75,22 @@ def is_valid(s):
 יש להשתמש בפעולה שכתבתם בסעיף א׳.
 
 ```python
-# משתנה שמחזיק את מספר המחרוזות התקניות
-validated_strings_count = 0
-
-# לולאה שרצה 23 פעמים
-for i in range(23):
-    # קליטת מחרוזת מהמשתמש
-    user_input = input("אנא הכנס מחרוזת:")
-
-    # בדיקה אם המחרוזת היא תקנית
-    if is_valid(user_input):
-        # אם המחרוזת תקנית, מוסיפים 1 למשתנה valid
-        validated_strings_count += 1
-
-# הדפסת מספר המחרוזות התקניות והלא תקניות
-print(f"מספר המחרוזות התקניות: {validated_strings_count}\nמספר המחרוזות הלא תקניות: {23 - validated_strings_count}")
+def func2():
+    # משתנה שמחזיק את מספר המחרוזות התקניות
+    validated_strings_count = 0
+    
+    # לולאה שרצה 23 פעמים
+    for i in range(23):
+        # קליטת מחרוזת מהמשתמש
+        user_input = input("אנא הכנס מחרוזת:")
+    
+        # בדיקה אם המחרוזת היא תקנית
+        if is_valid(user_input):
+            # אם המחרוזת תקנית, מוסיפים 1 למשתנה valid
+            validated_strings_count += 1
+    
+    # הדפסת מספר המחרוזות התקניות והלא תקניות
+    print(f"מספר המחרוזות התקניות: {validated_strings_count}\nמספר המחרוזות הלא תקניות: {23 - validated_strings_count}")
 
 ```
 
@@ -459,8 +461,12 @@ def unick_arr(lst1, lst2):
 כאשר n הוא גודל הרשימה המקורית ו-m הוא מספר המפתחות היחודיים במילון.
 
 ```python
-if __name__ =="__main__":
+
+def main():
+    func1() # מימוש שאלה 1
     print(is_valid("AbbAc1A"))  # פונקציה עבור שאלה 2(א).
+    func2() # שאלה 2(ב).
+    
     print(is_balanced([1,2,5,-5,-1,-2]))  #פונקציה עבור שאלה 3.
 
     # מימוש של שאלה 4(א)
@@ -523,5 +529,9 @@ if __name__ =="__main__":
     # קריאה לפונקציה unick_arr עם שתי הרשימות [35, 923, 781, 12349, 1892] ו-[2, 358, 181, 5821, 1742, 36621, 27731]
     print(unick_arr([35, 923, 781, 12349, 1892],[2, 358, 181, 5821, 1742, 36621, 27731]))  # צפוי להדפיס [923, 12349, 358, 5821, 1742, 36621]
 
+    pass
+
+if __name__ =="__main__":
+    main()
     pass
 ```
