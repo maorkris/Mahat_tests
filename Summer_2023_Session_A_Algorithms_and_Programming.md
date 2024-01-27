@@ -82,6 +82,7 @@ is_ordered(arr)
 אפשר להניח ש- 0>size וגם x<y.
 
 ```python
+
 #א׳
 def ordered_list(arr):
     # משתנה שמחזיק את האינדקס של המספר האי-זוגי הראשון ברשימה
