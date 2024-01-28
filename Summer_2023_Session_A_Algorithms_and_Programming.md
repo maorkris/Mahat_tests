@@ -155,7 +155,7 @@ print(oerdarr(1, 10, 10))
 
 
 ```python
-# מחלקה שמייצגת זמן
+
 class Time:
     # פונקציית האתחול של המחלקה, מקבלת שעה ודקות ומאתחלת את האובייקט
     def __init__(self, hour, minutes):
