@@ -83,9 +83,7 @@ is_ordered(arr)
 
 ```python
 
-# חלק א
-
-
+# חלק א'
 def ordered_list(arr):
     # משתנה שמחזיק את האינדקס של המספר האי-זוגי הראשון ברשימה
     index = 0
