@@ -132,6 +132,8 @@ def oerdarr(x, y, size):
 
 print(ordered_list([6, 24, 12, 8, 44, 3, 7]))
 print(oerdarr(1, 10, 10))
+![image](https://github.com/maorkris/Mahat_tests/assets/142143890/bd6beac5-8b9a-44b8-a0f1-ba1f57aa3352)
+
 ```
 
                                 שאלה 4
