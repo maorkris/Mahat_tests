@@ -83,7 +83,7 @@ is_ordered(arr)
 
 ```python
 
-#א׳
+# חלק א'
 def ordered_list(arr):
     # משתנה שמחזיק את האינדקס של המספר האי-זוגי הראשון ברשימה
     index = 0
@@ -108,8 +108,7 @@ def ordered_list(arr):
         # אם לא מצאנו מספר זוגי אחרי מספר אי-זוגי, זה אומר שהרשימה מסודרת
         return True
 
-#ב׳
-
+# חלק ב'
 import random
 
 def oerdarr(x, y, size):
@@ -131,11 +130,8 @@ def oerdarr(x, y, size):
     # מחזירים את הרשימה שמתחילה במספרים הזוגיים וממשיכה במספרים האי-זוגיים
     return equal + odd
 
-
 print(ordered_list([6, 24, 12, 8, 44, 3, 7]))
 print(oerdarr(1, 10, 10))
-
-
 
 ```
 
