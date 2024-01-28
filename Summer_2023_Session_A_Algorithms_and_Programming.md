@@ -83,7 +83,7 @@ is_ordered(arr)
 
 ```python
 
-# חלק א'
+
 def ordered_list(arr):
     # משתנה שמחזיק את האינדקס של המספר האי-זוגי הראשון ברשימה
     index = 0
@@ -132,7 +132,6 @@ def oerdarr(x, y, size):
 
 print(ordered_list([6, 24, 12, 8, 44, 3, 7]))
 print(oerdarr(1, 10, 10))
-
 ```
 
                                 שאלה 4
