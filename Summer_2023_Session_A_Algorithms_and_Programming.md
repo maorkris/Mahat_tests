@@ -432,7 +432,6 @@ def compare_to(self,other_Digit):
 
 
 
-
                                 שאלה 10
 
 
