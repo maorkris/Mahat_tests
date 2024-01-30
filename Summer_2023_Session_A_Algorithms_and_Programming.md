@@ -324,7 +324,9 @@ print(revers(a, b))  # יחזיר True
 
 
 נתונה מחלקה Digits המתארת ספרות של מספר שלם וחיובי. למחלקה Digits תכונה אחת בלבד arr_digits – רשימה בת עשרה ערכים מטיפוס מספר שלם, המייצגת את מספר הפעמים שבו כל ספרה בין 0‐9 מופיעה במספר.
-![צילום מסך 2024-01-29 ב-22.32.07.png](..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fq5%2Ftfbw2fcs7hbdgc_gcjs0x8040000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_MkYjZJ%2F%D7%A6%D7%99%D7%9C%D7%95%D7%9D%20%D7%9E%D7%A1%D7%9A%202024-01-29%20%D7%91-22.32.07.png)
+<img width="879" alt="צילום מסך 2024-01-29 ב-23 01 30" src="https://github.com/maorkris/Mahat_tests/assets/142143890/6f5d0ee7-f67c-4e06-b00b-c6ec1af02320">
+
+
 
 (4 נק') א. כתבו במחלקה Digits פעולה בונה (constructor) המקבלת כפרמטר מספר שלם חיובי
 כלשהו ומאתחלת את התכונה arr_digits בהתאם (כלומר הרשימה תכיל את מספר הפעמים שכל ספרה מופיעה בו).
