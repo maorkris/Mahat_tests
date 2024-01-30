@@ -142,10 +142,10 @@ print(oerdarr(1, 10, 10))
  מייצגת נקודת זמן לפי מספר שעות ומספר דקות.המחלקה Time
 
 
-class Time:
-        def __init__(self, hour, minutes):
-            self.hour = hour
-            self.minutes = minutes
+    class Time:
+            def __init__(self, hour, minutes):
+                self.hour = hour
+                self.minutes = minutes
 
 א. כתבו במחלקה  פעולה המקבלת הפניה לאובייקט מטיפוס  ״זמן״ ומחזירה את מספר הדקות שעברו בין הזמן המיוצג על-ידי האובייקט שמפעיל את הפעולה (self ) לזמן המיוצג באמצעות  other. 
 
