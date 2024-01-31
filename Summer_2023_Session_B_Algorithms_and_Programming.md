@@ -1,5 +1,6 @@
 <div dir="rtl">
-                            חלק א׳   
+
+### חלק א׳   
 
 #### ענו על ארבע מבין השאלות 6-1 (ערך כל שאלה – 12 נקודות) 
 
@@ -39,11 +40,15 @@ def func1():
     
     # הדפסת המספר הגדול ביותר והקטן ביותר שהתקבלו
     print(f"המספר הגדול ביותר שהתקבל: {max_val}\nהמספר הקטן ביותר שהתקבל: {min_val}")
+
+    func1()
 ```
+1. [ ] _`הפונקציה abs() היא פונקציה מובנית בשפת Python שמחזירה את הערך המוחלט של מספר. זה אומר שהיא מחזירה את המרחק של המספר מ-0 בציר המספרים. לדוגמה, abs(-5) יחזיר 5 ו-abs(5) גם יחזיר 5.`_
+
+---
 
 
-
-                שאלה 2
+                שאלה 2 (12 נק') 
 
 (6 נק') א. מחרוזת "תקינה" היא מחרוזת העונה לשני תנאים הבאים:
 • אורך המחרוזת אי-זוגי.
@@ -53,7 +58,7 @@ def func1():
 כתבו פעולה המקבלת מחרוזת ובודקת אם היא "מחרוזת תקינה".
 אם כן – הפעולה תחזיר ערך True , ולא – הפעולה תחזיר ערך False.
 
-כותרת הפעולה: is_valid(s)
+כותרת הפעולה: `is_valid(s)`
 
 ```python
 
@@ -61,7 +66,6 @@ def func1():
 # פונקציה שבודקת אם מחרוזת היא "תקינה"
 def is_valid(s):
     # הגדרת משתנים שיכילו את התווים: הראשון, האמצעי והאחרון במחרוזת
-
     first_char,mid_char, last_char = s[0], s[len(s) // 2], s[len(s) -1]
     # בדיקה אם אורך המחרוזת הוא אי-זוגי ובנוסף שהתו הראשון, האמצעי והאחרון זהים
     if len(s) % 2 != 0 and first_char == mid_char == last_char:
@@ -70,6 +74,15 @@ def is_valid(s):
     return False 
 
 ```
+`אם תהייתם מה קורה בשורה השנייה בקוד, חשוב שתדעו, יש אפשרות להשמת משתנים ברצף כגון:
+`
+```python
+x,y,z = 1,2,3
+print(x) => 1
+print(y) => 2
+print(z) => 3
+```
+
 
          (6 נק') ב׳         
 כתבו קטע קוד הקולט 23 מחרוזות.
@@ -96,7 +109,7 @@ def func2():
 
 ```
 
-
+---
       (12  נק') שאלה 3               
 רשימה של מספרים שלמים נקראת "רשימה מאוזנת" אם היא עונה על תנאים הבאים:
 • כמות האיברים החיוביים שווה לכמות האיברים השליליים.
@@ -107,41 +120,56 @@ def func2():
 
 ```python
 def is_balanced(arr):
+    #משתנה שמחזיק את הרשימה בסדר הפוך
+    reversed_arr = arr[::-1]
     # משתנה שמחזיק את מספר האיברים החיוביים ברשימה
     positive_counter = 0
 
     # בדיקה אם מספר האיברים ברשימה הוא מספר זוגי
     if len(arr) % 2 == 1:
-        return False
+        # אם כן, מחזירים את הרשימה בסדר הפוך
+        return reversed_arr
 
     # עוברים על כל איבר ברשימה
     for i in arr:
         # אם האיבר הוא אפס, הרשימה אינה מאוזנת
         if i == 0:
-            return False
+            # מחזירים את הרשימה בסדר הפוך
+            return reversed_arr
 
         # אם האיבר הוא מספר חיובי, מוסיפים 1 למונה
         elif i > 0:
             positive_counter += 1
 
     # בדיקה אם מספר האיברים החיוביים שווה למספר האיברים השליליים
-    return len(arr) - positive_counter == positive_counter
+    if len(arr) - positive_counter == positive_counter:
+        # אם כן, מחזירים את הרשימה
+        return arr
+
+print(is_balanced([1,2,5,-5,-1,-2])) # => output: [1,2,5,-5,-1,-2] is balanced !
   ```
 
+---
+                (12 נק') שאלה 4
 
-
-      שאלה 4                  
 חברת "פרחי הארץ" מגדלת פרחים ושולחת אותם למכירה לחוץ לארץ.
 נתונה מחלקה FlowerPackage המייצגת משלוח פרחים המיועד לשליחה לחו"ל.
 למחלקה יש את התכונות הבאות:
+
 • type – סוג הפרח, מטיפוס מחרוזת. •
+
 num – מספר פרחים במשלוח, מטיפוס מספר שלם. 
+
 • time – מספר שעות שניתן להחזיק את הפרחים ללא מים, מטיפוס מספר שלם.
+
 • price – מחיר פרח בודד, מטיפוס מספר ממשי.
 
 
 במחלקה הוגדרה פעולה בונה (בנאי) המקבל פרמטרים לכל התכונות.
-(4 נק') א. כתבו פעולה בונה המקבלת סוג פרח ומחיר. הפעולה מייצרת משלוח סטנדרטי של 2,000 פרחים.
+
+
+(4 נק') א.
+כתבו פעולה בונה המקבלת סוג פרח ומחיר. הפעולה מייצרת משלוח סטנדרטי של 2,000 פרחים.
 זמן סטנדרטי שאפשר להחזיק את הפרחים ללא מים – 12 שעות.
 
 
@@ -161,9 +189,23 @@ class FlowerPackage:
         # יצירת משלוח חדש עם הפרמטרים הנתונים והגדרות סטנדרטיות למספר הפרחים וזמן האחסון
         new_delivery = FlowerPackage(flower_type,num =2000, time=12, price=flower_price)
         return new_delivery  # מחזירה את המשלוח החדש
+    
+    
+# מימוש של שאלה 4(א)
+# יצירת מופע של המחלקה FlowerPackage
+flower_package = FlowerPackage.delivery("Rose", 5.5)
+
+# הדפסת המאפיינים של המשלוח
+print(f"Type: {flower_package.type}")
+print(f"Number of flowers: {flower_package.num}")
+print(f"Storage time without water: {flower_package.time}")
+print(f"Price per flower: {flower_package.price}")
 
 ```
-            (8 נק') ב
+---
+
+
+### (8 נק') ב
 
 
 עקב בעיות לוגיסטיות, חברת התעופה מציעה מסלול טיסה ארוך יותר.
@@ -172,23 +214,38 @@ class FlowerPackage:
 כתבו פעולה חיצונית המקבלת רשימה הפניות לעצמים מסוג FlowerPackage בשם arr ואורך הטיסה flyTime.
 הפעולה תדפיס פרטי המשלוחים שלא יהיו תקינים.
 הפעולה גם תחשב ותדפיס סכום ש"פרחי הארץ" הפסידה. כותרת הפעולה:
-                    compensation(arr, flyTime)
+                    `compensation(arr, flyTime)`
                     
 הנחה: כל איבר ברישמה מכיל הפניה לעצם מסוג FlowerPackage ואין איברים שערכם שווה ל- null.
                     
 ```python
-
 def compensation(arr, flyTime):
     """
     מחשב את הפיצוי עבור כל הפרחים שזמן ה- flyTime גדול מזמן חיי הפרחים
     הפיצוי מחושב כך: מספר הפרחים כפול המחיר.
     """
+    # משתנה שמחזיק את סך הפיצוי
     compensation = 0
+    # עוברים על כל הפרחים ברשימה
     for flower in arr:
+        # אם משך הטיסה גדול מזמן חיי הפרחים
         if flyTime > flower.time:
+            # מוסיפים לסך הפיצוי את מספר הפרחים כפול מחיר הפרח
             compensation += flower.num * flower.price
 
+    # מחזירים את סך הפיצוי
     return compensation
+
+# מימוש של פונקציה :שאלה 4(ב)
+
+flower1 = FlowerPackage("ROSE", 10, 14, 5.0)
+flower2 = FlowerPackage("LILY", 10, 10, 6.5)
+flower3 = FlowerPackage("TULIP", 10, 13, 4.7)
+flower4 = FlowerPackage("DAISY", 10, 9, 7.0)
+
+arr = [flower1, flower2, flower3, flower4]
+
+print(compensation(arr, 12))
 ```
 
 
@@ -599,16 +656,7 @@ def main():
 
 
 
-    # מימוש של פונקציה :שאלה 4(ד)
-
-    flower1 = FlowerPackage("ROSE", 10, 14, 5.0)
-    flower2 = FlowerPackage("LILY", 10, 10, 6.5)
-    flower3 = FlowerPackage("TULIP", 10, 13, 4.7)
-    flower4 = FlowerPackage("DAISY", 10, 9, 7.0)
-
-    arr = [flower1, flower2, flower3, flower4]
-
-    print(compensation(arr, 12))
+   
 
     # מימוש שאלה 8 (א)
     # יצירת אובייקט Client
