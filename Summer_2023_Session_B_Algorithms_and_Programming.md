@@ -61,9 +61,6 @@ def func1():
 כותרת הפעולה: `is_valid(s)`
 
 ```python
-
-
-# פונקציה שבודקת אם מחרוזת היא "תקינה"
 def is_valid(s):
     # הגדרת משתנים שיכילו את התווים: הראשון, האמצעי והאחרון במחרוזת
     first_char,mid_char, last_char = s[0], s[len(s) // 2], s[len(s) -1]
