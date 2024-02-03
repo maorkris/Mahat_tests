@@ -146,7 +146,8 @@ def is_balanced(arr):
         # אם כן, מחזירים את הרשימה
         return arr
 
-print(is_balanced([1,2,5,-5,-1,-2])) # => output: [1,2,5,-5,-1,-2] is balanced !
+print(is_balanced([1,2,5,-5,-1,-2])) # => output: [1,2,5,-5,-1,-2] is balanced!
+
   ```
 
 ---
@@ -401,7 +402,7 @@ def proposal(arr, num, rate1, rate2):
 
  כתבו פעולה אשר מקבלת מספר שלם חיובי ומחזירה את ה"משקל הנקי" שלו
 ```python
- def clean_weight(num):
+def clean_weight(num):
     """
 פונקציה שמחשבת את "משקל הנקי" של מספר שלם חיובי.
 "משקל נקי" הוא סכום הספרות של המספר ללא הספרה השמאלית ביותר וללא הספרה הימנית ביותר.
@@ -418,6 +419,9 @@ def proposal(arr, num, rate1, rate2):
         sum_weight += int(num_str[i])
     # החזרת המשקל הנקי של המספר
     return sum_weight
+
+print(clean_weight(123))  # => output: 2
+print(clean_weight(12345))  # => output: 9
 ```
 
                    (5 נק') ב
@@ -440,6 +444,10 @@ def sort_weight_arr(arr):
             return False
     # אם הגענו לסוף הרשימה ללא שום בעיה, הרשימה ממוינת לפי "משקל נקי"
     return True
+
+print(sort_weight_arr([35, 923, 781, 12349, 1892]))  # => output: False
+print(sort_weight_arr([35, 923, 781, 1892, 12349, 1892]))  # => output: True
+
 ```
 
                    (5 נק') ג
@@ -505,6 +513,9 @@ def unick_arr(lst1, lst2):
             res.append(dict2[k])
     # החזרת רשימת התוצאה
     return res
+
+print(unick_arr([35, 923, 781, 12349, 1892], [2, 358, 181, 5821, 1742, 36621, 27731]))  # => output: [923, 12349, 358, 5821, 1742, 36621]
+
 ```
 
                    (5 נק') ד
@@ -638,11 +649,7 @@ print(is_super_parm([[123, 321], [456, 654], [789, 987]]))  # תחזיר True, �
 ```python
 
 def main():
-    func1() # מימוש שאלה 1
-    print(is_valid("AbbAc1A"))  # פונקציה עבור שאלה 2(א).
-    func2() # שאלה 2(ב).
-    
-    print(is_balanced([1,2,5,-5,-1,-2]))  #פונקציה עבור שאלה 3.
+
 
     # מימוש של שאלה 4(א)
     # יצירת מופע של המחלקה FlowerPackage
@@ -682,9 +689,6 @@ def main():
     proposal(arr, 4, 5, 10)  #בסיום תודפס הכתובת ״התעשייה 9״ מכיוון שהצריכה שלהם ל4 אנשים היא הגבוהה מהממוצע
 
 
-    # מימוש שאלה 9א
-    # קריאה לפונקציה clean_weight עם המספר 12345
-    print(clean_weight(12345))  # צפוי להדפיס 9
 
     # שאלה 9ב
     # קריאה לפונקציה sort_weight_arr עם הרשימה [35, 923, 781, 12349, 1892]
