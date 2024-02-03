@@ -141,11 +141,12 @@ print(oerdarr(1, 10, 10))
                                 שאלה 4
  מייצגת נקודת זמן לפי מספר שעות ומספר דקות.המחלקה Time
 
-
-    class Time:
-            def __init__(self, hour, minutes):
-                self.hour = hour
-                self.minutes = minutes
+```python
+class Time:
+    def __init__(self, hour, minutes):
+        self.hour = hour
+        self.minutes = minutes
+```
 
 א. כתבו במחלקה  פעולה המקבלת הפניה לאובייקט מטיפוס  ״זמן״ ומחזירה את מספר הדקות שעברו בין הזמן המיוצג על-ידי האובייקט שמפעיל את הפעולה (self ) לזמן המיוצג באמצעות  other. 
 
@@ -465,6 +466,87 @@ def compare_to(self,other_Digit):
 
 
                                 שאלה 10
+
+
+```python
+
+class Room:
+    def __init__(self, kind, area, freq):
+        self.kind = kind  # סוג החדר
+        self.area = area  # שטח החדר
+        self.freq = freq  # תדירות הניקיון
+
+
+class App:
+    def __init__(self, app_num, owner, rooms, rate):
+        self.app_num = app_num  # מספר הדירה
+        self.owner = owner  # בעל הדירה
+        self.rooms = rooms  # רשימת החדרים
+        self.rate = rate  # מחיר למטר מרובע
+
+
+
+class Building:
+    def __init__(self, address, apartments):
+        self.address = address  # כתובת הבניין
+        self.apartments = apartments  # רשימת הדירות
+
+    def month_report(self, builds, clients):
+        for client_name in clients:
+            for build in builds:
+                for app in build.apartments:
+                    if client_name == app.owner:
+                        total_cost = 0
+                        print(f"Owner: {app.owner}\nApartment Number: {app.app_num}")
+                        for room in app.rooms:
+                            print(f"Room Type: {room.kind}, Area: {room.area}, Cleaning Frequency: {room.freq}")
+                        cost = app.month_cost()
+                        print(f"Monthly Cleaning Cost for the Apartment: {cost}")
+                        total_cost += cost
+                        print(f"Total Cost for {app.owner}: {total_cost}\n")
+
+# יצירת חדרים
+room1 = Room("bedroom", 15, 1)
+room2 = Room("living room", 20, 2)
+room3 = Room("kitchen", 10, 1)
+
+# יצירת דירות
+app1_rooms = [room1, room2, room3]
+app1 = App(1, "avi", app1_rooms, 10)
+
+app2_rooms = [room1, room2]
+app2 = App(2, "dani", app2_rooms, 12)
+
+app3_rooms = [room3]
+app3 = App(3, "moshe", app3_rooms, 8)
+
+# יצירת בניינים
+building1 = Building("Tel Aviv", [app1, app2])
+building2 = Building("Jerusalem", [app3])
+builds = [building1, building2]
+
+
+```
+
+מימוש שאלה ב׳ 
+
+```python
+# חישוב העלות החודשית לניקיון כל דירה
+print(f"Monthly cleaning cost for apartment 1: {app1.month_cost()}")
+print(f"Monthly cleaning cost for apartment 2: {app2.month_cost()}")
+print(f"Monthly cleaning cost for apartment 3: {app3.month_cost()}")
+```
+
+מימוש שאלה ג׳
+
+```python
+# קריאה לפעולה המדפיסה דוח חודשי
+building1.month_report(builds, ["avi", "dani", "moshe"])
+```
+
+
+
+                                שאלה 11
 
 
 </div>
