@@ -648,16 +648,6 @@ print(is_super_parm([[123, 321], [456, 654], [789, 987]]))  # תחזיר True, �
 def main():
 
 
-    # מימוש של שאלה 4(א)
-    # יצירת מופע של המחלקה FlowerPackage
-    flower_package = FlowerPackage.delivery("Rose", 5.5)
-
-    # הדפסת המאפיינים של המשלוח
-    print(f"Type: {flower_package.type}")
-    print(f"Number of flowers: {flower_package.num}")
-    print(f"Storage time without water: {flower_package.time}")
-    print(f"Price per flower: {flower_package.price}")
-
 
 
    
