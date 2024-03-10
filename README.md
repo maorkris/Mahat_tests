@@ -39,7 +39,7 @@
 מצאתם בעיה ?
 יש לכם שאלה ? 
 אל תהססו לפנות אלי.
-בנוסף אתם מוזמנים להתחבר ללינקדאין שלי : [![linkedin.com/in/maor-krispel](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/) 
+בנוסף אתם מוזמנים להתחבר ללינקדאין שלי : [![linkedin.com/in/maor-krispel](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin)](linkedin.com/in/maor-krispel) 
 
 
 </div>
